@@ -11,7 +11,7 @@ const AddTodo = function ({ text, handleClick }) {
         handleClick(input);
     }
 
-    return <Container>
+    return <Container className="Add-todo">
         <InputGroup className="mb-3">
             <Button
                 variant="primary"
