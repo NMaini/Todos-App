@@ -6,16 +6,16 @@ const Todos = function ({ todos, onToggleTodo }) {
     return <Container>
         <ListGroup>
             {todos.map(todo => {
-                return <Todo key={todo.index} todo={todo} onClick={(e) => {
-                    onToggleTodo(todo);
-                }}></Todo>
+                return <Todo key={todo.index} todo={todo} onToggleTodo={onToggleTodo}></Todo>
             })}
         </ListGroup>
     </Container>
 };
 
-const Todo = function ({ todo }) {
-    return <ListGroupItem className={todo.status}>
+const Todo = function ({ todo, onToggleTodo }) {
+    return <ListGroupItem className={todo.status} onClick={() => {
+        onToggleTodo(todo);
+    }}>
         {todo.index}. {todo.name}
     </ListGroupItem>;
 };

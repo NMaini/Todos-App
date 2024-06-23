@@ -20,11 +20,12 @@
 }
 
 .Completed {
-    color: aliceblue;
+    background-color: aliceblue;
+    text-decoration: line-through;
 }
 
 .Incomplete {
-    color: burlywood;
+    background-color: burlywood;
 }
 
 .Todo-status {

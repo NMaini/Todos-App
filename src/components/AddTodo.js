@@ -8,7 +8,9 @@ const AddTodo = function ({ text, handleClick }) {
     const [input, setInput] = useState("");
 
     let onAddTodo = function (e) {
-        handleClick(input);
+        setInput("");
+        if(input !== "")
+            handleClick(input);
     }
 
     return <Container className="Add-todo">
